@@ -17,6 +17,22 @@ body {
     font-family: sans-serif;
     color:rgb(42, 42, 42);
 }
+.digital-clock {
+    position: absolute;
+    background-color: white;
+    border: solid 3px;
+    border-radius: 3px;
+    z-index: 4;
+}
+.digital-clock ul {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    margin: 10px;
+    padding: 10px;
+    list-style: none;
+    font-size: 30px;
+}
 .alarm {
     top: 550px;
     position: absolute;
@@ -33,31 +49,14 @@ body {
     font-size: 20px;
     height: 70px;
     width: 70px;
-
+    margin: 3px;
 }
 .nav div {
     display: inline;
     float: inline-end;
-    size: ;
-}
-.stopwatch {
-    top: 450px;
-    position: absolute;
-    border: solid 3px black;   
-    border-radius: 5px; 
-    background-color: white;
-    margin: 0;
-    padding: 0;
-}
-.stopwatch ul {
-    position: relative;
-    display: flex;
-    list-style: none;
-    margin: 10px;
-    padding: 10px;
-    
-    display: flex;
+    margin: 20px;
     font-size: 30px;
+    font-family:'Courier New', Courier, monospace;
 }
 .timer {
     position: absolute;
@@ -83,23 +82,7 @@ body {
 #reset {
     margin:10px;
 }
-.digital-clock {
-    position: absolute;
-    background-color: white;
-    border: solid 3px;
-    border-radius: 3px;
-    z-index: 4;
-}
-.digital-clock ul {
-    margin: 10px;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    list-style: none;
-    font-size: 30px;
-    /* background-color: white; */
-}
+
 .clock {
     width: 300px;
     height: 300px;
@@ -134,7 +117,7 @@ body {
     background-color:rgb(42, 42, 42);
     z-index: 2;
 }
-.hand{
+.hand {
     z-index: 1;
     position: absolute;
     display: flex;

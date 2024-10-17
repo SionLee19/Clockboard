@@ -1,7 +1,6 @@
 let hr = document.getElementById('hour');
 let min = document.getElementById('min');
 let sec = document.getElementById('sec');
-
 // let div = document.querySelector('div');
 
 // let offsetX, offsetY;
@@ -19,21 +18,9 @@ let sec = document.getElementById('sec');
 // document.addEventListener("mouseup", () => 
 // {document.removeEventListener("mousemove", move);
 // });
-let start = document.getElementById('start');
-if(start.isPres)
-function move() {
+// function move() {
 
-}
-var s_second = 30;
-function stopwatch() {
-    var s_hr = Math.floor(s_second/3600);
-    var s_min = Math.floor(s_second%3600/60);
-    var s_sec = s_second%3600%60;
-    document.getElementById('s-hr').innerHTML = s_hr < 10 ? "0" + s_hr : s_hr;
-    document.getElementById('s-min').innerHTML = s_min < 10 ? "0" + s_min : s_;
-    document.getElementById('s-sec').innerHTML = s_sec < 10 ? "0" + s_sec : s_sec;
-    s_second++;
-}   
+// }  
 function displayTime() {
     //declares date object
     let date = new Date();
@@ -63,7 +50,7 @@ function displayTime() {
     document.getElementById('d-sec').innerHTML = second;
     document.getElementById('pm-am').innerHTML = AM_PM;
 }
-var totalSec = 3605;
+var totalSec = 4;
 function timer() {
     var t_hr = Math.floor(totalSec/3600);
     var t_min = Math.floor(totalSec%3600/60);
@@ -71,14 +58,20 @@ function timer() {
     t_hr = t_hr < 10 ? "0" + t_hr : t_hr;
     t_min = t_min < 10 ? "0" + t_min : t_min;
     t_sec = t_sec < 10 ? "0" + t_sec : t_sec;
-    // t_hr = Math.floor(totalSec/3600) < 10 ? "0" + Math.floor(totalSec/3600) : Math.floor(totalSec/3600);
-    // t_min = Math.floor(totalSec%3600/60) < 10 ? "0" + Math.floor(totalSec%3600/60) : Math.floor(totalSec%3600/60);
-    // t_sec = totalSec%3600%60 < 10 ? "0" + totalSec%3600%60 : totalSec%3600%60;
     document.getElementById('t-hr').innerHTML = t_hr;
     document.getElementById('t-min').innerHTML = t_min;
     document.getElementById('t-sec').innerHTML = t_sec;
     totalSec--;
 }
-setInterval(timer, 1000);
-setInterval(stopwatch, 1000);
-setInterval(displayTime, 1);    
+if(totalSec == 0) {
+    timerDisplayInteral = clearInterval(timer);
+}
+const displayInterval = setInterval(displayTime, 1);   
+const timerDisplayInteral = setInterval(timer, 1000);
+
+console.log(totalSec);
+// if(totalSec == 0) {
+//     clearInterval(timerDisplayInteral);
+// }
+
+
