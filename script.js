@@ -1,6 +1,7 @@
 let hr = document.getElementById('hour');
 let min = document.getElementById('min');
 let sec = document.getElementById('sec');
+// var reset = document.getElementById('reset');
 // let div = document.querySelector('div');
 
 // let offsetX, offsetY;
@@ -50,8 +51,12 @@ function displayTime() {
     document.getElementById('d-sec').innerHTML = second;
     document.getElementById('pm-am').innerHTML = AM_PM;
 }
-var totalSec = 4;
+var memSec = 4;
+var totalSec = memSec;
 function timer() {
+    if(totalSec == 0) {
+        clearInterval(timerDisplayInteral);
+    }
     var t_hr = Math.floor(totalSec/3600);
     var t_min = Math.floor(totalSec%3600/60);
     var t_sec = totalSec%3600%60;    
@@ -63,12 +68,8 @@ function timer() {
     document.getElementById('t-sec').innerHTML = t_sec;
     totalSec--;
 }
-if(totalSec == 0) {
-    timerDisplayInteral = clearInterval(timer);
-}
 const displayInterval = setInterval(displayTime, 1);   
 const timerDisplayInteral = setInterval(timer, 1000);
-
 console.log(totalSec);
 // if(totalSec == 0) {
 //     clearInterval(timerDisplayInteral);

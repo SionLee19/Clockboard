@@ -14,18 +14,30 @@
       <button class="add">+</button>
       <div>Clockboard</div>
     </nav>
-    <div class="container">
-      <div class="digital-clock">
-        <ul>
-          <li id="d-hr">00</li>                               
-          <li>:</li>
-          <li id="d-min">00</li>
-          <li>:</li>
-          <li id="d-sec">00</li>
-          &nbsp;<li id="pm-am">PM</li>
-        </ul>
+    <div class="digital-clock">
+      <ul>
+        <li id="d-hr">00</li>                               
+        <li>:</li>
+        <li id="d-min">00</li>
+        <li>:</li>
+        <li id="d-sec">00</li>
+        &nbsp;<li id="pm-am">PM</li>    
+      </ul>
+    </div>
+    <div class="timer">
+      <ul>
+        <li id="t-hr">00</li>
+        <li>:</li>
+        <li id="t-min">00</li>
+        <li>:</li>
+        <li id="t-sec">00</li>
+      </ul>
+      <div id="timer-buttons"> 
+        <button id="start">Start</button>
+        <button onclick="resetTimer()" id="reset">Reset</button>
       </div>
-      <div class="clock">
+    </div>
+    <div class="clock">
         <div style="--clr: rgb(42, 42, 42); --h: 75px; --w: 5px" id="hour" class="hand">
           <i></i>
         </div>
@@ -48,19 +60,16 @@
         <span style="--i: 11"><b>11</b></span>
         <span style="--i: 12"><b>12</b></span>
       </div>
-      <div class="timer">
-        <ul>
-          <li id="t-hr">00</li>
-          <li>:</li>
-          <li id="t-min">00</li>
-          <li>:</li>
-          <li id="t-sec">00</li>
-        </ul>
-        <div id="timer-buttons"> 
-          <button id="start">Start</button>
-          <button id="reset">Reset</button>
-        </div>
-      </div>
+    <!-- <div class="container">
+      
+    </div> -->
+    <div class="stopwatch">
+      <ul>
+        <li id="sw-h"></li>
+        <li id="sw-m"></li>
+        <li id="sw-s"></li>
+        <li id=""></li>
+      </ul>
     </div>
     <script src="script.js"></script>
   </body>
