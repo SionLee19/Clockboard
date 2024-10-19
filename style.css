@@ -1,7 +1,6 @@
 body {
-    min-height:100vh;
-    margin:0;
-    font-family: sans-serif;
+    min-height: 100vh;
+    margin: 0;
 }
 .nav {
     z-index:10;
