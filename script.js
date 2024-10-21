@@ -1,7 +1,7 @@
 let hr = document.getElementById('hour');
 let min = document.getElementById('min');
 let sec = document.getElementById('sec');  
-
+const displayInterval = setInterval(displayTime, 1);  
 function displayTime() {
     let date = new Date();
 
@@ -28,8 +28,8 @@ function displayTime() {
     document.getElementById('d-min').innerHTML = minute;
     document.getElementById('d-sec').innerHTML = second;
     document.getElementById('pm-am').innerHTML = AM_PM;
-}
-const displayInterval = setInterval(displayTime, 1);   
+} 
+let t_display = true;
 let memSec = 400;
 let totalSec = memSec;
 let t_hr = Math.floor(totalSec/3600);
@@ -41,7 +41,8 @@ t_sec = t_sec < 10 ? "0" + t_sec : t_sec;
 document.getElementById('t-hr').innerHTML = t_hr;
 document.getElementById('t-min').innerHTML = t_min;
 document.getElementById('t-sec').innerHTML = t_sec;
-function timer() {
+let timerDisplayInteral;
+const timer = () => {
     if(totalSec == 0) {
         clearInterval(timerDisplayInteral);
     }
@@ -56,6 +57,37 @@ function timer() {
     document.getElementById('t-sec').innerHTML = t_sec;
     totalSec--;
 }
+const startTimer = () => {
+    clearInterval(timerDisplayInteral);
+    timerDisplayInteral = setInterval(timer, 1000);
+    if(!t_display) {
+        t_display = true;
+        clearInterval(timerDisplayInteral);
+        document.getElementById("t-start").innerHTML = "Start";
+    } else {
+        t_display = false;
+        document.getElementById("t-start").innerHTML = "Stop";
+    }
+}
+const resetTimer = () => {
+    totalSec = memSec;
+    let t_hr = Math.floor(totalSec/3600);
+    let t_min = Math.floor(totalSec%3600/60);
+    let t_sec = totalSec%3600%60; 
+    t_hr = t_hr < 10 ? "0" + t_hr : t_hr;
+    t_min = t_min < 10 ? "0" + t_min : t_min;
+    t_sec = t_sec < 10 ? "0" + t_sec : t_sec;
+    document.getElementById('t-hr').innerHTML = t_hr;
+    document.getElementById('t-min').innerHTML = t_min;
+    document.getElementById('t-sec').innerHTML = t_sec;
+    clearInterval(timerDisplayInteral);
+    display_t = true;
+    document.getElementById("t-start").innerHTML = "Start";
+}
+let t_start = document.getElementById("t-start");
+let t_reset = document.getElementById("t-reset");
+t_start.addEventListener("click", startTimer);
+t_reset.addEventListener("click", resetTimer);
 let display_s = true;
 let stopwatchInterval;
 let HTotal = 0;
