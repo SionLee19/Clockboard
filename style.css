@@ -1,7 +1,7 @@
 body {
     min-height:100vh;
     margin:0;
-    font-family: san;
+    font-family: sans-serif;
 }
 .nav {
     z-index:10;
@@ -10,22 +10,38 @@ body {
     width:100%;
     justify-items:center;
 }
-/* .container {   
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-    color:rgb(42, 42, 42);
-} */
+.stopwatch {
+    position: relative;
+    border: solid black 3px;
+    border-radius: 5px;
+    width: min-content;
+}
+.stopwatch ul {
+    padding: 10px;
+    margin: 10px;
+    list-style: none;
+    display: flex;
+    font-size: 30px;
+}
+#stopwatch-buttons {
+    display:flex;
+    justify-content: center;
+}
+#s-start {
+    margin: 10px;
+    padding: 10px;
+}
+#s-reset {
+    margin: 10px;
+}
 .digital-clock {
     display:flex;
     position:relative;
-    background-color: white;
-    border: solid 3px;
-    border-radius: 3px;
+    background-color:white;
+    border:solid 3px;
+    border-radius:3px;
     width:min-content;
-    z-index: 4;
+    z-index:4;
 }
 .digital-clock ul {
     display: flex;
@@ -37,16 +53,18 @@ body {
     font-size: 30px;
 }
 .alarm {
-    top: 550px;
-    position: absolute;
-    background-color: white;
-    border: solid 3px black;
+    display: flex;
+    position: relative;
+    border: 3px solid black;
+    border-radius: 5px;
+    width:fit-content;
 }
 .alarm ul {
-    position: absolute;
     display: flex;
     list-style: none;
-   
+    margin: 10px;
+    padding: 10px;
+    font-size: 30px;    
 }
 .nav button {
     font-size: 20px;
@@ -79,17 +97,17 @@ body {
     display: flex;
     justify-content: center;
 }
-#start {
+#t-start {
     padding: 10px;
     margin: 10px;
 }
-#reset {
+#t-reset {
     margin:10px;
 }
 
 .clock {
-    position: absolute;
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     width: 300px;
@@ -97,7 +115,7 @@ body {
     border-radius: 50%;
     background-color:white;
     border: 5px solid;
-    border-color:rgb(42, 42, 42);
+    border-color:black;
 }
 
 .clock span {
@@ -120,10 +138,9 @@ body {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background-color:rgb(42, 42, 42);
+    background-color:black;
     z-index: 2;
 }
-
 .hand {
     z-index: 1;
     position: absolute;
