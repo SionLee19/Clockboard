@@ -1,84 +1,86 @@
 <!DOCTYPE html>
-<!-- SHELLO-WORLD -->
 <html lang="en">
-  <head>
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Clockboard</title>
-    <link rel="icon" type="image/x-icon" src="https://static.vecteezy.com/system/resources/previews/019/899/711/original/simple-clock-icon-design-png.png">
   </head>
   <body>
     <nav class="nav">
       <button class="add">+</button>
-      <div>Clockwork</div>
+      <div>Clockboard</div>
     </nav>
-    <div class="container">
-      <div class="digital-clock">
-        <ul>
-          <li id="d-hr">00</li>                               
-          <li>:</li>
-          <li id="d-min">00</li>
-          <li>:</li>
-          <li id="d-sec">00</li>
-          &nbsp;<li id="pm-am">PM</li>
-        </ul>
+    <div class="digital-clock">
+      <ul>
+        <li id="d-hr">00</li>                               
+        <li>:</li>
+        <li id="d-min">00</li>
+        <li>:</li>
+        <li id="d-sec">00</li>
+        &nbsp;<li id="pm-am">PM</li>
+      </ul>
+    </div>
+    <div class="clock">
+      <div style="--clr: black; --h: 75px; --w: 5px" id="hour" class="hand">
+        <i></i>
       </div>
-      <div class="clock">
-        <div style="--clr: rgb(42, 42, 42); --h: 75px; --w: 5px" id="hour" class="hand">
-          <i></i>
-        </div>
-        <div style="--clr: rgb(42, 42, 42); --h: 110px; --w: 5px" id="min" class="hand">
-          <i></i>
-        </div>
-        <div style="--clr: red; --h: 135px; --w: 3px" id="sec" class="hand">
-          <i></i>
-        </div>
-        <span style="--i: 1"><b>1</b></span>
-        <span style="--i: 2"><b>2</b></span>
-        <span style="--i: 3"><b>3</b></span>
-        <span style="--i: 4"><b>4</b></span>
-        <span style="--i: 5"><b>5</b></span>
-        <span style="--i: 6"><b>6</b></span>
-        <span style="--i: 7"><b>7</b></span>
-        <span style="--i: 8"><b>8</b></span>
-        <span style="--i: 9"><b>9</b></span>
-        <span style="--i: 10"><b>10</b></span>
-        <span style="--i: 11"><b>11</b></span>
-        <span style="--i: 12"><b>12</b></span>
+      <div style="--clr: black; --h: 110px; --w: 5px" id="min" class="hand">
+        <i></i>
       </div>
-      <div class="timer">
-        <ul>
-          <li id="t-hr">00</li>
-          <li>:</li>
-          <li id="t-min">00</li>
-          <li>:</li>
-          <li id="t-sec">00</li>
-        </ul>
-        <div id="timer-buttons"> 
-          <button id="start">Starts</button>
-          <button id="reset">Reset</button>
-        </div>
+      <div style="--clr: red; --h: 135px; --w: 3px" id="sec" class="hand">
+        <i></i>
       </div>
-      <div class="stopwatch">
-        <ul>
-          <li id="s-hr">00</li>
-          <li>:</li>
-          <li id="s-min">00</li>
-          <li>:</li>
-          <li id="s-sec">00</li>
-        </ul>
-      </div>
-      <div class="alarm">
-        <ul>
-          <li id="a-hr">00</li>                               
-          <li>:</li>
-          <li id="a-min">00</li>
-          &nbsp;<li id="a- pm-am">PM</li>
-        </ul>
+      <span style="--i: 1"><b>1</b></span>
+      <span style="--i: 2"><b>2</b></span>
+      <span style="--i: 3"><b>3</b></span>
+      <span style="--i: 4"><b>4</b></span>
+      <span style="--i: 5"><b>5</b></span>
+      <span style="--i: 6"><b>6</b></span>
+      <span style="--i: 7"><b>7</b></span>
+      <span style="--i: 8"><b>8</b></span>
+      <span style="--i: 9"><b>9</b></span>
+      <span style="--i: 10"><b>10</b></span>
+      <span style="--i: 11"><b>11</b></span>
+      <span style="--i: 12"><b>12</b></span>
+    </div>
+    <div class="timer">
+      <ul>
+        <li id="t-hr">00</li>
+        <li>:</li>
+        <li id="t-min">00</li>
+        <li>:</li>
+        <li id="t-sec">00</li>
+      </ul>
+      <div id="timer-buttons"> 
+        <button id="t-start">Start</button>
+        <button id="t-reset">Reset</button>
       </div>
     </div>
+    <div class="stopwatch">
+      <ul>
+        <li id="s-hr">00</li>
+        <li>:</li>
+        <li id="s-min">00</li>
+        <li>:</li>
+        <li id="s-sec">00</li>
+        <li>:</li>
+        <li id="s-csec">00</li>
+      </ul>
+      <div id="stopwatch-buttons">
+        <button id="s-start">Start</button>
+        <button id="s-reset">Reset</button>
+      </div>
+    </div>
+    <div class="alarm">
+      <ul>
+        <li id="a-hr">00</li>                               
+        <li>:</li>
+        <li id="a-min">00</li>
+        &nbsp;<li id="a- pm-am">PM</li>
+      </ul>
+    </div>      
     <script src="script.js"></script>
   </body>
 </html>
