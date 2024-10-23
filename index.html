@@ -22,7 +22,7 @@
         &nbsp;<li id="pm-am">PM</li>
       </ul>
     </div>
-    <div class="clock">
+    <div class="clock" id="1-clock" onClick="reply_click(this.id)">
       <div style="--clr: black; --h: 75px; --w: 5px" id="hour" class="hand">
         <i></i>
       </div>
@@ -45,7 +45,7 @@
       <span style="--i: 11"><b>11</b></span>
       <span style="--i: 12"><b>12</b></span>
     </div>
-    <div class="timer">
+    <div class="timer" id="1-timer" onClick="reply_click(this.id)">
       <ul>
         <li id="t-hr">00</li>
         <li>:</li>
@@ -68,12 +68,12 @@
         <li>:</li>
         <li id="s-csec">00</li>
       </ul>
-      <div id="stopwatch-buttons">
+      <div id="stopwatch-buttons" id="1-stopwatch" onClick="reply_click(this.id)">
         <button id="s-start">Start</button>
         <button id="s-reset">Reset</button>
       </div>
     </div>
-    <div class="alarm">
+    <div class="alarm" id="1-alarm" onClick="reply_click(this.id)">
       <ul>
         <li id="a-hr">00</li>                               
         <li>:</li>
